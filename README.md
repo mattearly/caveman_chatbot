@@ -14,10 +14,11 @@ some extra files are in here just in case i feel like playing with different ver
 3. load in an ELIZA chatbot  
 4. talk to her with sentences surrounded by ()  
 
+    ````
     sudo apt install gcl
     gcl  
     (load 'AUXFNS.LSP)  
     (load 'ELIZA1.LSP) or (load 'ELIZA_CAVEMAN.LSP)   
     (hello how are you today?)  
     (i feel good about his)    
-    
+    ````
