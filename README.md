@@ -9,16 +9,15 @@ files being used to run:
 3. ELIZA_CAVEMAN.LSP  
 
 how to run:  
-1. load up global common list   
-    ````gcl````  
+1. load up global common lisp   
 2. load in AUXFNS.LSP  
-    ````(load 'AUXFNS.LSP)````  
-3. load in a chatbot  
-    ````(load 'ELIZA1.LSP)````  
-    or  
-    ````(load 'ELIZA_CAVEMAN.LSP)````   
+3. load in an ELIZA chatbot  
 4. talk to her with sentences surrounded by ()  
+
+    ````sudo apt install gcl````
+    ````gcl````  
+    ````(load 'AUXFNS.LSP)````  
+    ````(load 'ELIZA1.LSP)```` or ````(load 'ELIZA_CAVEMAN.LSP)````   
     ````(hello how are you today?)````  
-    ````(i feel good about his)````  
-    etc  
+    ````(i feel good about his)````    
     
