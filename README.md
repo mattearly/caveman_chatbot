@@ -13,7 +13,8 @@ some extra files are in here just in case i feel like playing with different ver
 2. load in AUXFNS.LSP  
 3. load in an ELIZA chatbot  
 4. talk to her with sentences surrounded by ()  
-
+  
+  
     ````
     sudo apt install gcl
     gcl  
