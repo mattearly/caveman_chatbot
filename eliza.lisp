@@ -18,7 +18,7 @@
 
 
 
-(defun variable-p (x)
+(defun variable-p (x)u've got ot settle 
 
   "Is x a variable (a symbol beginning with `?')?"
 
