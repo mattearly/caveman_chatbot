@@ -1,25 +1,24 @@
 # eliza_chatbot
-
-
+  
 some extra files are in here just in case i feel like playing with different versions.  
-
+  
 ### files being used to run:  
-1. ELIZA1.LSP  
-2. AUXFNS.LSP  
-3. ELIZA_CAVEMAN.LSP  
-
+1. AUXFNS.LSP  
+2. ELIZA_CAVEMAN.LSP  
+  
 ### how to run:  
-1. load up global common lisp   
+1. load up global common lisp  
 2. load in AUXFNS.LSP  
 3. load in an ELIZA chatbot  
 4. talk to her with sentences surrounded by ()  
   
-### how to run in terminal on ubuntu
-    ````
-    sudo apt install gcl
+### how to run in terminal on ubuntu  
+        
+    sudo apt install gcl  
     gcl  
     (load 'AUXFNS.LSP)  
-    (load 'ELIZA_CAVEMAN.LSP)   
+    (load 'ELIZA_CAVEMAN.LSP)  
+    (caveman)   
     (hello how are you today?)  
-    (i feel good about his)    
-    ````
+    (i feel good about this)    
+    

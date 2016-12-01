@@ -1,12 +1,10 @@
-is enough)
-;;;(DO YOU OFTEN FEEL THIS IS ENOUGH ?) 
-;;;ELIZA> [Abort]
-
 ;;; ==============================;;; -*- Mode: Lisp; Syntax: Common-Lisp; -*-
 ;;; Code from Paradigms of Artificial Intelligence Programming
 ;;; Copyright (c) 1991 Peter Norvig
 
 ;;;; File eliza1.lisp: Basic version of the Eliza program
+
+;;;; Modded version is ELIZA_CAVEMAN.LSP: updated by Matthew Early (matthewjearly@gmail.com)
 
 ;;; The basics are in auxfns.lisp; look for "PATTERN MATCHING FACILITY"
 
@@ -105,7 +103,9 @@ is enough)
 
 (defun caveman ()
   "Respond to user input using pattern matching rules."
-  (print '"try using words like: feel, was, no, if, want")
+  (print '"Caveman has a hard time understanding.")
+  (print '"Try using words like: feel, was, no, if, want")
+  (print '"Also be sure to surround your statements in ()") 
   (loop
     (print 'caveman>)
     (write (flatten (use-eliza-rules (read))) :pretty t)))
