@@ -1,4 +1,8 @@
-;;; -*- Mode: Lisp; Syntax: Common-Lisp; -*-
+is enough)
+;;;(DO YOU OFTEN FEEL THIS IS ENOUGH ?) 
+;;;ELIZA> [Abort]
+
+;;; ==============================;;; -*- Mode: Lisp; Syntax: Common-Lisp; -*-
 ;;; Code from Paradigms of Artificial Intelligence Programming
 ;;; Copyright (c) 1991 Peter Norvig
 
@@ -64,6 +68,8 @@
 (defparameter *eliza-rules*
  '((((?* ?x) hello (?* ?y))      
     (hullo me hapy to see u gan))
+    (((?* ?x) hi (?* ?y))      
+    (hi to you me hapy to see u gan))   
    (((?* ?x) I want (?* ?y))     
     (that arr neat - me sinc big ?y boom)
     (like ?y come wind to shiny ocean) (now yes to ?y and hand new chopper))
@@ -79,16 +85,29 @@
    (((?* ?x) I feel (?* ?y))     
     (feel must be reason for ?y trust ?y))
    (((?* ?x) I felt (?* ?y))     
-    (to last end ?x is now and the slantest ?y))))
+    (to last end ?y is now and the slantest ?y))
+   (((?* ?x) sometimes (?* ?y))     
+    (sometime is hard word for caveman to grasp) (?y always come to late for day)
+    (gods sometimes do ?y))
+   (((?* ?x) what (?* ?y))     
+    (i r no comprehend) (when the sun comes up then we have seen)
+    (my brother came up with the club))
+   (((?* ?x) caveman (?* ?y))     
+    (what is caveman?) (is ?y what you think of my people)
+    (caveman say ?y in other way) (your words hurt))
+   (((?* ?x) cavemen (?* ?y))     
+    (we outnumber you careful with word ?y) (is ?y what you think of my people)
+    (caveman say ?y in other way) (your words hurt))
+  )
+)
 
 ;;; ==============================
 
-(defun eliza ()
+(defun caveman ()
   "Respond to user input using pattern matching rules."
   (print '"try using words like: feel, was, no, if, want")
-  (print '" ")
   (loop
-    (print 'eliza_the_cavewoman>)
+    (print 'caveman>)
     (write (flatten (use-eliza-rules (read))) :pretty t)))
 
 (defun use-eliza-rules (input)
@@ -125,26 +144,4 @@
   "Choose an element from a list at random."
   (elt choices (random (length choices))))
 
-;;; ==============================
-
-;;;> (eliza)
-;;;ELIZA> (hello there)
-;;;(HOW DO YOU DO. PLEASE STATE YOUR PROBLEM.) 
-;;;ELIZA> (i want to test this program)
-;;;(WHAT WOULD IT MEAN IF YOU GOT TO TEST THIS PROGRAM) 
-;;;ELIZA> (i could see if it works)
-;;;(DO YOU REALLY THINK ITS LIKELY THAT IT WORKS)
-;;;ELIZA> (no not really)
-;;;(ARE YOU SAYING "NO" JUST TO BE NEGATIVE?) 
-;;;ELIZA> (no)
-;;;(ARE YOU SAYING "NO" JUST TO BE NEGATIVE?) 
-;;;ELIZA> (forget it-- i was wondering how general the program is)
-;;;(WHY DO YOU TELL ME YOU WERE WONDERING HOW GENERAL THE PROGRAM IS NOW?)
-;;;ELIZA> (i felt like it)
-;;;(WHAT OTHER FEELINGS DO YOU HAVE?) 
-;;;ELIZA> (i feel this is enough)
-;;;(DO YOU OFTEN FEEL THIS IS ENOUGH ?) 
-;;;ELIZA> [Abort]
-
-;;; ==============================
 
