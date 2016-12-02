@@ -1,14 +1,10 @@
 ;;; ==============================;;; -*- Mode: Lisp; Syntax: Common-Lisp; -*-
 ;;; Code from Paradigms of Artificial Intelligence Programming
 ;;; Copyright (c) 1991 Peter Norvig
-
-;;;; File eliza1.lisp: Basic version of the Eliza program
-
-;;;; Modded version is ELIZA_CAVEMAN.LSP: by Matthew Early (matthewjearly@gmail.com)
-
+;;; File eliza1.lisp: Basic version of the Eliza program
+;;; Modded version is ELIZA_CAVEMAN.LSP: by Matthew Early (matthewjearly@gmail.com)
 ;;; The basics are in auxfns.lisp; look for "PATTERN MATCHING FACILITY"
-
-;; New version of pat-match with segment variables
+;;; New version of pat-match with segment variables
 
 (defun variable-p (x)
   "Is x a variable (a symbol beginning with `?')?"
